@@ -66,19 +66,15 @@ def total_even_pairs(src)
   # the number was even. Review the operator documentation if you've forgotten
   # this!
   
-   # LONG VERSION
-  has_even = false
-  even_results = 0
   row_index = 0
+  even_total = 0
+  sum = 0
   while row_index < src.count do
-    element_index = 0
-    while element_index < src[row_index].count do
-      if src[row_index][element_index] % 2 == 0
-        even_results += src[row_index][element_index]
-      end
-      element_index += 1
+    if src[row_index][0] % 2 == 0 && src[row_index][1] % 2 == 0
+      sum = src[row_index][0] + src[row_index][1]
+      total += sum
     end
     row_index += 1
   end
-  return even_results
+  return even_total
 end
